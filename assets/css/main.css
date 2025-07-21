@@ -40,10 +40,20 @@
 /* ======================== Functions Css End ======================= */
 /* Font Family*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+@media screen and (max-width: 768px) {
+  .desktop-register {
+    display: none!important;
+  }
+}
 @font-face {
   font-family: 'Lato';
   src: url('../css/Lato-Regular.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato-Light';
+  src: url('../css/Lato-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -156,7 +166,7 @@
     --main-300: hsl(var(--main-h), var(--main-s), calc(var(--main-l) + (100% - var(--main-l)) * 0.6));
     --main-400: hsl(var(--main-h), var(--main-s), calc(var(--main-l) + (100% - var(--main-l)) * 0.5));
     --main-500: hsl(var(--main-h), var(--main-s), calc(var(--main-l) + (100% - var(--main-l)) * 0.4));
-    --main-600: #664886;
+    --main-600: #664881;
     --main-700: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.1));
     --main-800: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.2));
     --main-900: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.3));
@@ -167,14 +177,14 @@
     --main-two-300: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) + (100% - var(--main-two-l)) * 0.6));
     --main-two-400: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) + (100% - var(--main-two-l)) * 0.5));
     --main-two-500: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) + (100% - var(--main-two-l)) * 0.4));
-    --main-two-600: #53765b;
+    --main-two-600: #8edf34;
     --main-two-700: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) - var(--main-two-l) * 0.1));
     --main-two-800: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) - var(--main-two-l) * 0.2));
     --main-two-900: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) - var(--main-two-l) * 0.3));
     --main-three-25: hsl(var(--main-three-h), var(--main-three-s), calc(var(--main-three-l) + (100% - var(--main-three-l)) * 0.94));
     --main-three-50: hsl(var(--main-three-h), var(--main-three-s), calc(var(--main-three-l) + (100% - var(--main-three-l)) * 0.9));
     --main-three-100: hsl(var(--main-three-h), var(--main-three-s), calc(var(--main-three-l) + (100% - var(--main-three-l)) * 0.8));
-    --main-three-200: #d6c8b6;
+    --main-three-200: #fdc500;
     --main-three-300: hsl(var(--main-three-h), var(--main-three-s), calc(var(--main-three-l) + (100% - var(--main-three-l)) * 0.6));
     --main-three-400: hsl(var(--main-three-h), var(--main-three-s), calc(var(--main-three-l) + (100% - var(--main-three-l)) * 0.5));
     --main-three-500: hsl(var(--main-three-h), var(--main-three-s), calc(var(--main-three-l) + (100% - var(--main-three-l)) * 0.4));
@@ -199,7 +209,7 @@
       --neutral-400: #5b6477;
       --neutral-500: #4f586d;
       --neutral-600: #404a60;
-      --neutral-700: #7c6b91   ;
+      --neutral-700: #664881   ;
       --neutral-800: #222e48;
       --neutral-900: #13203b;
     
@@ -295,7 +305,9 @@
     --font-6xxl: 4.5rem;
     --font-6xxxl: 5rem;
 }
-
+section#about-section {
+  background-color: #fef2d8;
+}
 /* ========================= Variable Css End ======================== */
 /* ============================ Mixins Css Start ============================ */
 /* Media Breakpoint for Each Device Start */
@@ -1332,6 +1344,7 @@ input[type=number] {
 .common-accordion .accordion-button {
     text-align: start;
 }
+
 
 /* ================================= Accordion Css End =========================== */
 /* ================================= Range Slider Css Start =========================== */
@@ -2985,7 +2998,8 @@ button:focus {
 }
 
 .mb-24 {
-  margin-block-end: var(--size-24) !important;
+  font-family: Lato-light;
+    /* font-size: 32px; */
 }
 
 .mb-26 {
@@ -5471,7 +5485,7 @@ button:focus {
 .flex-align, .common-check {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+
 }
 
 .flex-center {
@@ -6143,7 +6157,7 @@ button:focus {
 }
 
 .text-main-600 {
-  color: var(--main-600) !important;
+  color:#664881!important;
 }
 
 .text-main-700 {
