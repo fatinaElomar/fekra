@@ -5487,7 +5487,9 @@ button:focus {
   align-items: center;
 
 }
-
+.header-space{
+  justify-content: space-around;
+}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -10049,7 +10051,7 @@ button:focus {
 }
 
 .rounded-16 {
-  border-radius: 1rem !important;
+  border-radius: 4px !important;
 }
 
 .rounded-18 {
